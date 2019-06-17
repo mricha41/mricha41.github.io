@@ -1,0 +1,17 @@
+/*main css*/
+
+p, li {
+	font-size: 120%;
+}
+
+.content-areas {
+	padding: 2em;
+}
+
+.pretty-quote {
+	padding: 5px;
+	background-color: #c0c0c0;
+	color: #fff;
+	font-size: 150%;
+	border-radius: 5px;
+}
