@@ -1,0 +1,550 @@
+/*
+    We display a fallback message for users with browsers that don't support
+    all the features required by it. All of the content will be still fully 
+    accessible for them, but some more advanced effects would be missing.
+    When impress.js detects that browser supports all necessary CSS3 features, 
+    the fallback-message style is hidden.
+*/
+
+.fallback-message {
+    font-family: sans-serif;
+    line-height: 1.3;
+
+    width: 780px;
+    padding: 10px 10px 0;
+    margin: 20px auto;
+
+    border: 1px solid #E4C652;
+    border-radius: 10px;
+    background: #EEDC94;
+}
+
+.fallback-message p {
+    margin-bottom: 10px;
+}
+
+.impress-supported .fallback-message {
+    display: none;
+}
+
+
+/*
+  The body background is the bacgkround of "everything". Many
+  impress.js tools call it the "surface". It could also be a
+  picture or pattern, but we leave it as light gray.
+*/
+
+body {
+    min-height: 740px;
+    background: #fff;
+    color: #000;
+}
+
+/*
+    Now let's style the presentation steps.
+*/
+
+.step {
+    position: relative;
+    display: block;
+
+    width: 900px;
+    height: 700px;
+    margin: 20px auto;
+    padding: 40px 60px;
+
+    text-shadow: 0 2px 2px rgba(0, 10, 0, .5);
+
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 30px;
+    letter-spacing: -1px;
+
+}
+/*
+    Make inactive steps a little bit transparent.
+*/
+.impress-enabled .step {
+    margin: 0;
+    opacity: 0.3;
+    transition:         opacity 1s;
+}
+
+.impress-enabled .step.active { opacity: 1 }
+
+h1, 
+h2, 
+h3 {
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    margin: 0.7em;
+}
+
+li {
+    margin: 0.2em;    
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    padding: 0 0.1em;
+    background: rgba(100,100,100,0.3);
+    text-shadow: -1px 1px 2px rgba(100,100,100,0.9);
+    border-radius: 0.2em;
+    border-bottom: 1px solid rgba(100,100,100,0.4);
+    border-left:   1px solid rgba(100,100,100,0.4);
+
+    transition:         0.5s;
+}
+a:hover,
+a:focus {
+    background: rgba(100,100,100,1);
+    text-shadow: -1px 1px 2px rgba(50,50,50,0.5);
+}
+
+blockquote {
+    font-family: 'PT Serif';
+    font-style: italic;
+    font-weight: 400;    
+}
+
+em {
+    text-shadow: 0 2px 2px rgba(0, 0, 0, .3);    
+}
+
+strong {
+    text-shadow: -1px 1px 2px rgba(100,100,100,0.5);
+}
+
+q {
+    font-family: 'PT Serif';
+    font-style: italic;
+    font-weight: 400;    
+    text-shadow: 0 2px 2px rgba(0, 0, 0, .3);
+}
+
+strike {
+    opacity: 0.7;
+}
+
+small {
+    font-size: 0.4em;
+}
+
+img {
+    width: 300px
+}
+
+/**************** Visual Aids **********************/
+.blue {
+    color:#000099;
+}
+
+.red {
+    color:#ff0000;
+}
+
+.well
+{
+     border: thin solid 2px; 
+     border-radius: 10px; 
+     padding: 2px;
+     background-color: #c0c0c0;
+}
+
+.well-t
+{
+     border: thin solid 2px; 
+     border-radius: 10px; 
+     padding: 2px;
+     background-color: rgba(1,1,1,0.25);
+}
+
+/****************** Background images and slide handlers *******************/
+
+
+img.bg {
+    z-index: -100;
+    opacity: 0;
+    transition:  opacity 2s;
+}
+
+#intro-image {
+    width: 600px;
+    height: 338px;
+    position: absolute;
+    top: 100px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+body.impress-on-intro
+{
+    background-color: #fff;
+    transition:  background-color 2s;
+    color: #000;
+}
+
+body.impress-on-intro #intro-image
+{
+    opacity: 0.5;
+    transition:  opacity 2s;
+}
+
+body.impress-on-what
+{
+    /*...*/
+}
+
+body.impress-on-what ul
+{
+    font-size: 100%;
+    transition:  font-size 1.5s;
+}
+
+body.impress-on-research
+{
+
+}
+
+body.impress-on-research ul
+{
+    font-size: 90%;
+    transition:  font-size 1.5s;
+}
+
+body.impress-on-research-2
+{
+
+}
+
+body.impress-on-research-2 ul
+{
+    font-size: 100%;
+    transition:  font-size 1.5s;
+}
+
+body.impress-on-research-3
+{
+
+}
+
+body.impress-on-research-3 ul
+{
+    font-size: 100%;
+    transition:  font-size 1.5s;
+}
+
+#research-3-image {
+    width: 800px;
+    height: 600px;
+    position: absolute;
+    top: 50px;
+    bottom: 0;
+    left: -800px;
+    right: 0;
+    margin: auto;
+}
+
+body.impress-on-research-3 #research-3-image
+{
+    opacity: 0.25;
+    transition:  opacity 2s;
+}
+
+body.impress-on-design-1
+{
+
+}
+
+body.impress-on-design-1 ul
+{
+    font-size: 100%;
+    transition:  font-size 1.5s;
+}
+
+body.impress-on-design-1
+{
+
+}
+
+#design-1-image {
+    width: 1650px;
+    height: 1275px;
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+body.impress-on-design-1 #design-1-image
+{
+    opacity: 0.75;
+    transition:  opacity 2s;
+}
+
+body.impress-on-design-2 ul
+{
+    font-size: 100%;
+    transition:  font-size 1.5s;
+}
+
+#design-2-image {
+    width: 1212px;
+    height: 690px;
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+body.impress-on-design-2 #design-2-image
+{
+    opacity: 0.5;
+    transition:  opacity 2s;
+}
+
+body.impress-on-design-2
+{
+
+}
+
+body.impress-on-design-3 ul
+{
+    font-size: 90%;
+    transition:  font-size 1.5s;
+}
+
+#design-3-image {
+    width: 756px;
+    height: 835px;
+    position: absolute;
+    top: 200px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+body.impress-on-design-3 #design-3-image
+{
+    opacity: 0.5;
+    transition:  opacity 2s;
+}
+
+body.impress-on-design-4
+{
+
+}
+
+body.impress-on-design-4 ul
+{
+    font-size: 90%;
+    transition:  font-size 1.5s;
+}
+
+body.impress-on-design-4 #design-3-image
+{
+    opacity: 0.5;
+    transition:  opacity 2s;
+}
+
+#analysis-1-image {
+    width: 2484px;
+    height: 1484px;
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+body.impress-on-analysis-1 #analysis-1-image
+{
+    opacity: 0.5;
+    transition:  opacity 2s;
+}
+
+body.impress-on-analysis-2 #analysis-1-image
+{
+    opacity: 0.5;
+    transition:  opacity 2s;
+}
+
+body.impress-on-analysis-3 #analysis-1-image
+{
+    opacity: 0.5;
+    transition:  opacity 2s;
+}
+
+body.impress-on-analysis-3 ul
+{
+    font-size: 100%;
+    transition:  font-size 1.5s;
+}
+
+body.impress-on-analysis-4 #analysis-1-image
+{
+    opacity: 0.5;
+    transition:  opacity 2s;
+}
+
+body.impress-on-analysis-4 ul
+{
+    font-size: 90%;
+    transition:  font-size 1.5s;
+}
+
+body.impress-on-analysis-5 #analysis-1-image
+{
+    opacity: 0.5;
+    transition:  opacity 2s;
+}
+
+body.impress-on-analysis-5 ul
+{
+    font-size: 100%;
+    transition:  font-size 1.5s;
+}
+
+body.impress-on-conclusion
+{
+    
+}
+
+body.impress-on-conclusion ul
+{
+    font-size: 100%;
+    transition:  font-size 1.5s;
+}
+
+body.impress-on-conclusion #intro-image
+{
+    opacity: 0.5;
+    transition:  opacity 2s;
+}
+
+body.impress-on-sources
+{
+    
+}
+
+body.impress-on-sources ul
+{
+    font-size: 100%;
+    transition:  font-size 1.5s;
+}
+
+body.impress-on-sources #intro-image
+{
+    opacity: 0.5;
+    transition:  opacity 2s;
+}
+
+body.impress-on-overview
+{
+    
+}
+
+/******************* PLUGINS *************************************************************/
+/*
+  This version of impress.js supports plugins, and in particular, a UI toolbar
+  plugin that allows easy navigation between steps and autoplay.
+*/
+.impress-enabled div#impress-toolbar {
+    position: fixed;
+    right: 1px;
+    bottom: 1px;
+    opacity: 0.6;
+    z-index: 10;
+}
+.impress-enabled div#impress-toolbar > span {
+    margin-right: 10px;
+}
+
+/*
+    With help from the mouse-timeout plugin, we can hide the toolbar and
+    have it show only when you move/click/touch the mouse.
+*/
+body.impress-mouse-timeout div#impress-toolbar {
+    display: none;
+}
+
+/*
+    In fact, we can hide the mouse cursor itself too, when mouse isn't used.
+*/
+body.impress-mouse-timeout {
+    cursor: none;
+}
+
+/* Progress bar */
+.impress-progressbar {
+  position: absolute;
+  right: 118px;
+  bottom: 1px;
+  left: 118px;
+  border-radius: 7px;
+  border: 2px solid rgba(100, 100, 100, 0.2);
+}
+.impress-progressbar DIV {
+  width: 0;
+  height: 2px;
+  border-radius: 5px;
+  background: rgba(75, 75, 75, 0.4);
+  transition: width 1s linear;
+}
+.impress-progress {
+  position: absolute;
+  left: 59px;
+  bottom: 1px;
+  text-align: left;
+  font-size: 10pt;
+  opacity: 0.6;
+}
+
+/* Help popup plugin */
+.impress-enabled #impress-help {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.5);
+    color: #EEEEEE;
+    font-size: 80%;
+    position: fixed;
+    left: 2em;
+    bottom: 2em;
+    width: 24em;
+    border-radius: 1em;
+    padding: 1em;
+    text-align: center;
+    z-index: 100;
+    font-family: Verdana, Arial, Sans;
+}
+.impress-enabled #impress-help td {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+/* Substep plugin */
+
+#impress .step .substep {
+    opacity: 0;
+}
+
+#impress .step .substep.substep-visible {
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+.impress-enabled                          { pointer-events: none }
+.impress-enabled #impress                 { pointer-events: auto }
+.impress-enabled #impress-toolbar         { pointer-events: auto }
+.impress-enabled #impress-console-button  { pointer-events: auto }
