@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  	<meta charset="utf-8">
+	<title>Metroid Quiz</title>
+	<link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/dark-hive/jquery-ui.css">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+	<style type="text/css">
+		div {
+			margin: 10px;
+		}
+
+		.bigtext {
+			font-size: 24px;
+		}
+
+		.hideIt {
+		    display: none;
+  		}
+
+  		.hint {
+  			padding: 5px;
+  			background-color: #c0c0c0;
+  		}
+
+  		.hint:hover {
+  			background-color: #ff0000;
+  		}
+
+  		#q1 {
+  			background-color: #0000ff;
+  			padding: 5px;
+  			border: thin solid black;
+  		}
+
+  		#q2 {
+  			background-color: #ff00ff;
+  			padding: 5px;
+  			border: thin solid black;
+  		}
+
+  		#q3 {
+  			background-color: #ffff00;
+  			padding: 5px;
+  			border: thin solid black;
+  		}
+
+  		#q4 {
+  			background-color: #00ffff;
+  			padding: 5px;
+  			border: thin solid black;
+  		}
+
+  		#q5 {
+  			background-color: #ff9900;
+  			padding: 5px;
+  			border: thin solid black;
+  		}
+
+  		#conclusion {
+  			background-color: #ff0000;
+  			padding: 5px;
+  			border: thin solid black;
+  		}
+	</style>
+</head>
+<body>
+	<div id="instructions">
+		<h1>Game Trivia - Reveal</h1>
+		<p class="bigtext">
+			You will be presented with a starting Wikipedia page, quiz questions, and multiple choice response for each question. Hints are provided at the player's discretion for some questions so that it does not take too long to make it through the puzzle. As you answer questions correctly, the final question will be revealed along with the possible answers. The only requirement to win is to answer the final question correctly. To win, post the final answer to the discussion board in a new thread. This can be done at any time during the session since the final question is revealed before all questions are answered. Good luck!
+		</p>
+		<h2>Start looking for answers here: <a href="https://en.wikipedia.org/wiki/Metroid_(video_game)" target="_blank">https://en.wikipedia.org/wiki/Metroid_(video_game)</a></h2>
+	</div>
+	<div id="q1">
+		<h2>The hero of the game, Samus Aran, has what occupation?</h2>
+	  	<fieldset>
+		    <legend>Select a response: </legend>
+		    <label for="radio-1">Bounty hunter</label>
+		    <input type="radio" name="radio-1" id="radio-1">
+		    <label for="radio-2">Head hunter</label>
+		    <input type="radio" name="radio-1" id="radio-2">
+		    <label for="radio-3">Plumber</label>
+		    <input type="radio" name="radio-1" id="radio-3">
+		    <label for="radio-4">CTO</label>
+		    <input type="radio" name="radio-1" id="radio-4">
+		</fieldset>
+	</div>
+	<div id="q2" class="hideIt">
+		<h2>The art work in Metroid was inspired by what famous artist?</h1>
+		<fieldset>
+		    <legend>Select a response: </legend>
+		    <label for="radio-5">M.C. Escher</label>
+		    <input type="radio" name="radio-5" id="radio-5">
+		    <label for="radio-6">Andy Warhol</label>
+		    <input type="radio" name="radio-5" id="radio-6">
+		    <label for="radio-7">H.R. Giger</label>
+		    <input type="radio" name="radio-5" id="radio-7">
+		    <label for="radio-8">Salvador Dalí</label>
+		    <input type="radio" name="radio-5" id="radio-8">
+		</fieldset>
+	</div>
+	<div id="q3" class="hideIt">
+		<h2>What mechanic was Metroid known for when it was released for the NES?</h2>
+		<fieldset>
+		    <legend>Make a selection: </legend>
+		    <label for="radio-9">Charged weapons</label>
+		    <input type="radio" name="radio-9" id="radio-9"><br><br>
+		    <label for="radio-10">Character customization</label>
+		    <input type="radio" name="radio-9" id="radio-10"><br><br>
+		    <label for="radio-11">Wall jumping</label>
+		    <input type="radio" name="radio-9" id="radio-11"><br><br>
+		    <label for="radio-12">Screw attack</label>
+		    <input type="radio" name="radio-9" id="radio-12">
+		</fieldset>
+		<div id="hint1">
+			<pre class="hint bigtext">Click here to show the hint!</pre>
+			<p id="h-1" class="hideIt bigtext">
+				Stay at <a href="https://en.wikipedia.org/wiki/Metroid_(video_game)">https://en.wikipedia.org/wiki/Metroid_(video_game)</a>
+				The answer you're seeking can be found in the "Gameplay" section...
+			</p>
+		</div>
+	</div>
+	
+	<div id="q4" class="hideIt">
+		<h2>What kind of system did the North American release of Metroid rely on for tracking and restoring progress made throughout the game?</h2>
+		<fieldset>
+		    <legend>Select a response: </legend>
+		    <label for="radio-13">NES save states</label>
+		    <input type="radio" name="radio-13" id="radio-13">
+		    <label for="radio-14">Passwords</label>
+		    <input type="radio" name="radio-13" id="radio-14">
+		    <label for="radio-15">Battery backup saves</label>
+		    <input type="radio" name="radio-13" id="radio-15">
+		    <label for="radio-16">Game Genie codes</label>
+		    <input type="radio" name="radio-13" id="radio-16">
+		</fieldset>
+		<div id="hint2">
+			<pre class="hint bigtext">Click here to show the hint!</pre>
+			<p id="h-2" class="hideIt bigtext">
+				Stay at <a href="https://en.wikipedia.org/wiki/Metroid_(video_game)">https://en.wikipedia.org/wiki/Metroid_(video_game)</a>
+				The answer you're seeking can be found in the "Development" section...
+			</p>
+		</div>
+	</div>
+	
+	<div id="q5" class="hideIt">
+		<h1>FINAL QUESTION!!!</h1>
+		<h2 id="q5Heading">In three of five endings for Metroid, the developers chose to reveal what about the Samus Aran?</h2>
+		<fieldset>
+		    <legend>Select a response: </legend>
+		    <pre id="r17"><label for="radio-17">Samus is not really a bounty hunter</label>
+		    <input type="radio" name="radio-17" id="radio-17"></pre>
+		    <pre id="r18"><label for="radio-18">Samus is a woman</label>
+		    <input type="radio" name="radio-17" id="radio-18"></pre>
+		    <pre id="r19"><label for="radio-19">Samus forgot to turn the lights out before leaving Zebes</label>
+		    <input type="radio" name="radio-17" id="radio-19"></pre>
+		    <pre id="r20"><label for="radio-20">Samus didn't really destroy Mother Brain</label>
+		    <input type="radio" name="radio-17" id="radio-20"></pre>
+		</fieldset>
+		<div id="hint3">
+			<pre class="hint bigtext">Hint will appear once all of the answers have appeared.</pre>
+			<p id="h-3" class="hideIt bigtext">
+				The answer is too easy for a hint! If you're still here...keep looking for the answer.
+				<a href="https://en.wikipedia.org/wiki/Metroid_(video_game)">https://en.wikipedia.org/wiki/Metroid_(video_game)</a>
+			</p>
+		</div>
+	</div>
+
+	<div id="conclusion" class="hideIt">
+		<h1>Post your answer to the final question back in the discussion board! Make sure you open a new thread to comment.</h1>
+	</div>
+	
+	<script>
+		//set them all as radio buttons...
+  		$( function() {
+    		$( "input" ).checkboxradio();
+  		});
+
+  		function lastQuestionCallback()
+  		{
+  			$( "#q5" ).show("bounce", 500);
+  			$( "#r17" ).hide("fold", 10);
+  			$( "#r18" ).hide("fold", 10);
+  			$( "#r20" ).hide("fold", 10);
+  		}
+
+  		//selectively show portions of the last answer
+  		//while showing each question in succession
+  		$( "#radio-1" ).click(function() {
+  			$( "#q2" ).show("fold", 500, lastQuestionCallback);	
+		});
+
+		$( "#radio-7" ).click(function() {
+  			$( "#q3" ).show("fold", 500);
+  			$( "#r18" ).show("fold", 500);
+		});
+
+		$( "#radio-12" ).click(function() {
+  			$( "#q4" ).show("fold", 500);
+  			$( "#r20" ).show("fold", 500);
+		});
+
+		$( "#radio-14" ).click(function() {
+  			$( "#q5" ).show("fold", 500);
+  			$( "#r17" ).show("fold", 500);
+  			$( "#h-3" ).show("fade", 500);
+		});
+
+		$( "#radio-18" ).click(function() {
+  			$( "#conclusion" ).show("bounce", 1000);	
+		});
+
+		$( "#hint1" ).click(function() {
+  			$( "#h-1" ).show("fade", 500);	
+		});
+
+		$( "#hint2" ).click(function() {
+  			$( "#h-2" ).show("fade", 500);	
+		});
+  	</script>
+</body>
+</html>

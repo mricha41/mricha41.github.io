@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  	<meta charset="utf-8">
+	<title>Fallout Quiz</title>
+	<link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/dark-hive/jquery-ui.css">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+	<style type="text/css">
+		div {
+			margin: 10px;
+		}
+
+		.bigtext {
+			font-size: 24px;
+		}
+
+		.hideIt {
+		    display: none;
+  		}
+
+  		.hint {
+  			padding: 5px;
+  			background-color: #c0c0c0;
+  		}
+
+  		.hint:hover {
+  			background-color: #ff0000;
+  		}
+
+  		#q1 {
+  			background-color: #0000ff;
+  			padding: 5px;
+  			border: thin solid black;
+  		}
+
+  		#q2 {
+  			background-color: #ff00ff;
+  			padding: 5px;
+  			border: thin solid black;
+  		}
+
+  		#q3 {
+  			background-color: #ffff00;
+  			padding: 5px;
+  			border: thin solid black;
+  		}
+
+  		#q4 {
+  			background-color: #00ffff;
+  			padding: 5px;
+  			border: thin solid black;
+  		}
+
+  		#q5 {
+  			background-color: #ff9900;
+  			padding: 5px;
+  			border: thin solid black;
+  		}
+
+  		#conclusion {
+  			background-color: #ff0000;
+  			padding: 5px;
+  			border: thin solid black;
+  		}
+	</style>
+</head>
+<body>
+	<div id="instructions">
+		<h1>Game Trivia - Reveal</h1>
+		<p class="bigtext">
+			You will be presented with a starting Wikipedia page, quiz questions, and multiple choice responses for each question. Hints are provided at the player's discretion for some questions so that it does not take too long to make it through the puzzle. As you answer questions correctly, the final question will be revealed along with the possible answers. The only requirement to win is to answer the final question correctly. To win, post the final answer to the discussion board in a new thread. This can be done at any time during the session since the final question is revealed before all questions are answered. Good luck!
+		</p>
+		<h2>Start looking for answers here: <a href="https://en.wikipedia.org/wiki/Fallout_(series)" target="_blank">https://en.wikipedia.org/wiki/Fallout_(series)</a></h2>
+	</div>
+	<div id="q1">
+		<h2>In the third installment of the series, what large studio took over development of Fallout?</h2>
+	  	<fieldset>
+		    <legend>Select a studio: </legend>
+		    <label for="radio-1">2K</label>
+		    <input type="radio" name="radio-1" id="radio-1">
+		    <label for="radio-2">Bioware</label>
+		    <input type="radio" name="radio-1" id="radio-2">
+		    <label for="radio-3">Bethesda</label>
+		    <input type="radio" name="radio-1" id="radio-3">
+		    <label for="radio-4">Capcom</label>
+		    <input type="radio" name="radio-1" id="radio-4">
+		</fieldset>
+	</div>
+	<div id="q2" class="hideIt">
+		<h2>The “L” in “S.P.E.C.I.A.L.”, part of the character development system, refers to what attribute relevant to players of Fallout?</h1>
+		<fieldset>
+		    <legend>Select a response: </legend>
+		    <label for="radio-5">Luck</label>
+		    <input type="radio" name="radio-5" id="radio-5">
+		    <label for="radio-6">Learn</label>
+		    <input type="radio" name="radio-5" id="radio-6">
+		    <label for="radio-7">Link</label>
+		    <input type="radio" name="radio-5" id="radio-7">
+		    <label for="radio-8">Laser</label>
+		    <input type="radio" name="radio-5" id="radio-8">
+		</fieldset>
+	</div>
+	<div id="q3" class="hideIt">
+		<h2>Beginning in “Fallout: New Vegas”, Perks, or advantages of some form throughout the game, were offered to the player at what interval?</h1>
+		<fieldset>
+		    <legend>Make a selection: </legend>
+		    <label for="radio-9">Once</label>
+		    <input type="radio" name="radio-9" id="radio-9"><br>
+		    <label for="radio-10">Every 10 hours of game play</label>
+		    <input type="radio" name="radio-9" id="radio-10"><br>
+		    <label for="radio-11">Two or three times</label>
+		    <input type="radio" name="radio-9" id="radio-11"><br>
+		    <label for="radio-12">Every other level</label>
+		    <input type="radio" name="radio-9" id="radio-12">
+		</fieldset>
+		<div id="hint1">
+			<pre class="hint bigtext">Click here to show the hint!</pre>
+			<p id="h-1" class="hideIt bigtext">
+				Navigate from <a href="https://en.wikipedia.org/wiki/Fallout_(series)">https://en.wikipedia.org/wiki/Fallout_(series)</a> to <a href="https://en.wikipedia.org/wiki/Fallout:_New_Vegas">https://en.wikipedia.org/wiki/Fallout:_New_Vegas</a>
+				The answer you're seeking can be found in the "Gameplay" section...
+			</p>
+		</div>
+	</div>
+	<div id="q4" class="hideIt">
+		<h2>In “Fallout: New Vegas”, what mode actually refers to many of the mundane details that ordinary people must tend to in order to simply stay alive outside of video games?</h1>
+		<fieldset>
+		    <legend>Select a response: </legend>
+		    <label for="radio-13">Simulation mode</label>
+		    <input type="radio" name="radio-13" id="radio-13">
+		    <label for="radio-14">Hardcore mode</label>
+		    <input type="radio" name="radio-13" id="radio-14">
+		    <label for="radio-15">Starvation mode</label>
+		    <input type="radio" name="radio-13" id="radio-15">
+		    <label for="radio-16">Real Life mode</label>
+		    <input type="radio" name="radio-13" id="radio-16">
+		</fieldset>
+		<div id="hint2">
+			<pre class="hint bigtext">Click here to show the hint!</pre>
+			<p id="h-2" class="hideIt bigtext">
+				Stay at <a href="https://en.wikipedia.org/wiki/Fallout:_New_Vegas">https://en.wikipedia.org/wiki/Fallout:_New_Vegas</a>, keep looking in the "Gameplay" section...
+			</p>
+		</div>
+	</div>
+	<div id="q5" class="hideIt">
+		<h2>Other than its game play and quirk known to players of the Fallout series, what else is the series well-known for in recent years?</h1>
+		<fieldset>
+		    <legend>Select a response: </legend>
+		    <pre id="r17"><label for="radio-17">Glitches and bugs</label>
+		    <input type="radio" name="radio-17" id="radio-17"></pre>
+		    <pre id="r18"><label for="radio-18">Photorealism</label>
+		    <input type="radio" name="radio-17" id="radio-18"></pre>
+		    <pre id="r19"><label for="radio-19">3D graphics</label>
+		    <input type="radio" name="radio-17" id="radio-19"></pre>
+		    <pre id="r20"><label for="radio-20">Its loveable characters</label>
+		    <input type="radio" name="radio-17" id="radio-20"></pre>
+		</fieldset>
+		<div id="hint3">
+			<pre class="hint bigtext">Hint will appear once all of the answers have appeared.</pre>
+			<p id="h-3" class="hideIt bigtext">
+				Still skimming along at <a href="https://en.wikipedia.org/wiki/Fallout:_New_Vegas">https://en.wikipedia.org/wiki/Fallout:_New_Vegas</a>, you will find some info in the "Reception" section.
+			</p>
+		</div>
+	</div>
+	
+	<div id="conclusion" class="hideIt">
+		<h1>Post your answer to the final question back in the discussion board! Make sure you open a new thread to comment.</h1>
+	</div>
+
+	<script>
+		//set them all as radio buttons...
+  		$( function() {
+    		$( "input" ).checkboxradio();
+  		});
+
+  		function lastQuestionCallback()
+  		{
+  			$( "#q5" ).show("bounce", 500);
+  			$( "#r17" ).hide("fold", 10);
+  			$( "#r18" ).hide("fold", 10);
+  			$( "#r20" ).hide("fold", 10);
+  		}
+
+  		//selectively show portions of the last answer
+  		//while showing each question in succession
+  		$( "#radio-3" ).click(function() {
+  			$( "#q2" ).show("fold", 500, lastQuestionCallback);	
+		});
+
+		$( "#radio-5" ).click(function() {
+  			$( "#q3" ).show("fold", 500);
+  			$( "#r18" ).show("fold", 500);
+		});
+
+		$( "#radio-12" ).click(function() {
+  			$( "#q4" ).show("fold", 500);
+  			$( "#r20" ).show("fold", 500);
+		});
+
+		$( "#radio-14" ).click(function() {
+  			$( "#q5" ).show("fold", 500);
+  			$( "#r17" ).show("fold", 500);
+  			$( "#h-3" ).show("fade", 500);
+		});
+
+		$( "#radio-17" ).click(function() {
+  			$( "#conclusion" ).show("bounce", 1000);	
+		});
+
+		$( "#hint1" ).click(function() {
+  			$( "#h-1" ).show("fade", 500);	
+		});
+
+		$( "#hint2" ).click(function() {
+  			$( "#h-2" ).show("fade", 500);	
+		});
+  	</script>
+</body>
+</html>

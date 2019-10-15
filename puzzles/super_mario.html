@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  	<meta charset="utf-8">
+	<title>Super Mario Bros Quiz</title>
+	<link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/dark-hive/jquery-ui.css">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+	<style type="text/css">
+		div {
+			margin: 10px;
+		}
+
+		.bigtext {
+			font-size: 24px;
+		}
+
+		.hideIt {
+		    display: none;
+  		}
+
+  		.hint {
+  			padding: 5px;
+  			background-color: #c0c0c0;
+  		}
+
+  		.hint:hover {
+  			background-color: #ff0000;
+  		}
+
+  		#q1 {
+  			background-color: #0000ff;
+  			padding: 5px;
+  			border: thin solid black;
+  		}
+
+  		#q2 {
+  			background-color: #ff00ff;
+  			padding: 5px;
+  			border: thin solid black;
+  		}
+
+  		#q3 {
+  			background-color: #ffff00;
+  			padding: 5px;
+  			border: thin solid black;
+  		}
+
+  		#q4 {
+  			background-color: #00ffff;
+  			padding: 5px;
+  			border: thin solid black;
+  		}
+
+  		#q5 {
+  			background-color: #ff9900;
+  			padding: 5px;
+  			border: thin solid black;
+  		}
+
+  		#conclusion {
+  			background-color: #ff0000;
+  			padding: 5px;
+  			border: thin solid black;
+  		}
+	</style>
+</head>
+<body>
+	<div id="instructions">
+		<h1>Game Trivia - Reveal</h1>
+		<p class="bigtext">
+			You will be presented with a starting Wikipedia page, quiz questions, and multiple choice response for each question. Hints are provided at the player's discretion for some questions so that it does not take too long to make it through the puzzle. As you answer questions correctly, the final question will be revealed along with the possible answers. The only requirement to win is to answer the final question correctly. To win, post the final answer to the discussion board in a new thread. This can be done at any time during the session since the final question is revealed before all questions are answered. Good luck!
+		</p>
+		<h2>Start looking for answers here: <a href="https://en.wikipedia.org/wiki/Super_Mario_Bros." target="_blank">https://en.wikipedia.org/wiki/Super_Mario_Bros.</a></h2>
+	</div>
+	<div id="q1">
+		<h2>Who was one of the now-famous designers of the original Super Mario Bros. game on NES?</h2>
+	  	<fieldset>
+		    <legend>Select a response: </legend>
+		    <label for="radio-1">Ed Boon</label>
+		    <input type="radio" name="radio-1" id="radio-1">
+		    <label for="radio-2">Tetsuya Nomura</label>
+		    <input type="radio" name="radio-1" id="radio-2">
+		    <label for="radio-3">Shigeru Miyamoto</label>
+		    <input type="radio" name="radio-1" id="radio-3">
+		    <label for="radio-4">Ken Levine</label>
+		    <input type="radio" name="radio-1" id="radio-4">
+		</fieldset>
+	</div>
+	<div id="q2" class="hideIt">
+		<h2>Originally, Super Mario Bros. 2 was based on what discarded prototype (released in Japan under another name?)</h1>
+		<fieldset>
+		    <legend>Select a response: </legend>
+		    <label for="radio-5">Yume Kōjō: Doki Doki Panic</label>
+		    <input type="radio" name="radio-5" id="radio-5">
+		    <label for="radio-6">Downtown Nekketsu Monogatari</label>
+		    <input type="radio" name="radio-5" id="radio-6">
+		    <label for="radio-7">Akumajou Densetsu</label>
+		    <input type="radio" name="radio-5" id="radio-7">
+		    <label for="radio-8">Bananan Ouji no Daibouken</label>
+		    <input type="radio" name="radio-5" id="radio-8">
+		</fieldset>
+		<div id="hint1">
+			<pre class="hint bigtext">Click here to show the hint!</pre>
+			<p id="h-1" class="hideIt bigtext">
+				Navigate from <a href="https://en.wikipedia.org/wiki/Super_Mario_Bros.">https://en.wikipedia.org/wiki/Super_Mario_Bros.</a> to <a href="https://en.wikipedia.org/wiki/Super_Mario">https://en.wikipedia.org/wiki/Super_Mario</a>
+				The answer you're seeking can be found in the "Games" section...
+			</p>
+		</div>
+	</div>
+	<div id="q3" class="hideIt">
+		<h2>What mechanic in Super Mario Bros. 2 was a departure from the first in the series?</h2>
+		<fieldset>
+		    <legend>Make a selection: </legend>
+		    <label for="radio-9">Wall jumping</label>
+		    <input type="radio" name="radio-9" id="radio-9"><br><br>
+		    <label for="radio-10">Moving platforms</label>
+		    <input type="radio" name="radio-9" id="radio-10"><br><br>
+		    <label for="radio-11">Springs</label>
+		    <input type="radio" name="radio-9" id="radio-11"><br><br>
+		    <label for="radio-12">Picking up and throwing enemies and objects</label>
+		    <input type="radio" name="radio-9" id="radio-12">
+		</fieldset>
+		<div id="hint2">
+			<pre class="hint bigtext">Click here to show the hint!</pre>
+			<p id="h-2" class="hideIt bigtext">
+				Navigate from <a href="https://en.wikipedia.org/wiki/Super_Mario">https://en.wikipedia.org/wiki/Super_Mario</a> to <a href="https://en.wikipedia.org/wiki/Super_Mario_Bros._2">https://en.wikipedia.org/wiki/Super_Mario_Bros._2</a>
+				The answer you're seeking can be found in the "Gameplay" section...
+			</p>
+		</div>
+	</div>
+	
+	<div id="q4" class="hideIt">
+		<h2>Rather than rely solely on 1-UPs for extra lives in Super Mario Bros. 2, what feature was added to give players more ways to earn extra lives?</h2>
+		<fieldset>
+		    <legend>Select a response: </legend>
+		    <label for="radio-13">A life meter</label>
+		    <input type="radio" name="radio-13" id="radio-13">
+		    <label for="radio-14">Bonus stages</label>
+		    <input type="radio" name="radio-13" id="radio-14">
+		    <label for="radio-15">Slot machine</label>
+		    <input type="radio" name="radio-13" id="radio-15">
+		    <label for="radio-16">Scoring system</label>
+		    <input type="radio" name="radio-13" id="radio-16">
+		</fieldset>
+	</div>
+	
+	<div id="q5" class="hideIt">
+		<h1>FINAL QUESTION!!!</h1>
+		<h2 id="q5Heading">Beginning in 1889, Nintendo was founded as what kind of company?</h2>
+		<fieldset>
+		    <legend>Select a response: </legend>
+		    <pre id="r17"><label for="radio-17">Video game</label>
+		    <input type="radio" name="radio-17" id="radio-17"></pre>
+		    <pre id="r18"><label for="radio-18">Casino game</label>
+		    <input type="radio" name="radio-17" id="radio-18"></pre>
+		    <pre id="r19"><label for="radio-19">Board game</label>
+		    <input type="radio" name="radio-17" id="radio-19"></pre>
+		    <pre id="r20"><label for="radio-20">Playing card</label>
+		    <input type="radio" name="radio-17" id="radio-20"></pre>
+		</fieldset>
+		<div id="hint3">
+			<pre class="hint bigtext">Hint will appear once all of the answers have appeared.</pre>
+			<p id="h-3" class="hideIt bigtext">
+				Navigate from <a href="https://en.wikipedia.org/wiki/Super_Mario_Bros._2">https://en.wikipedia.org/wiki/Super_Mario_Bros._2</a> to <a href="https://en.wikipedia.org/wiki/Nintendo">https://en.wikipedia.org/wiki/Nintendo</a>
+				Look under the "History" section...
+			</p>
+		</div>
+	</div>
+
+	<div id="conclusion" class="hideIt">
+		<h1>Post your answer to the final question back in the discussion board! Make sure you open a new thread to comment.</h1>
+	</div>
+	
+	<script>
+		//set them all as radio buttons...
+  		$( function() {
+    		$( "input" ).checkboxradio();
+  		});
+
+  		function lastQuestionCallback()
+  		{
+  			$( "#q5" ).show("bounce", 500);
+  			$( "#r17" ).hide("fold", 10);
+  			$( "#r18" ).hide("fold", 10);
+  			$( "#r20" ).hide("fold", 10);
+  		}
+
+  		//selectively show portions of the last answer
+  		//while showing each question in succession
+  		$( "#radio-3" ).click(function() {
+  			$( "#q2" ).show("fold", 500, lastQuestionCallback);	
+		});
+
+		$( "#radio-5" ).click(function() {
+  			$( "#q3" ).show("fold", 500);
+  			$( "#r18" ).show("fold", 500);
+		});
+
+		$( "#radio-12" ).click(function() {
+  			$( "#q4" ).show("fold", 500);
+  			$( "#r20" ).show("fold", 500);
+		});
+
+		$( "#radio-15" ).click(function() {
+  			$( "#q5" ).show("fold", 500);
+  			$( "#r17" ).show("fold", 500);
+  			$( "#h-3" ).show("fade", 500);
+		});
+
+		$( "#radio-20" ).click(function() {
+  			$( "#conclusion" ).show("bounce", 1000);	
+		});
+
+		$( "#hint1" ).click(function() {
+  			$( "#h-1" ).show("fade", 500);	
+		});
+
+		$( "#hint2" ).click(function() {
+  			$( "#h-2" ).show("fade", 500);	
+		});
+  	</script>
+</body>
+</html>
